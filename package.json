@@ -1,0 +1,51 @@
+{
+  "name": "basetify",
+  "version": "0.0.1",
+  "description": "Base Project Fastify, PostgreSQL, GraphQL, Handlebase",
+  "main": "build/index.js",
+  "author": "Rizky Andhika",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run check-file && NODE_ENV=development nodemon src/index.ts | pino-pretty --colorize",
+    "start": "NODE_ENV=production node build/index.js",
+    "prestart": "npm run build && npm run check-file",
+    "build": "tsc",
+    "check-file": "node checklib.js"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "base64-img": "^1.0.4",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.12.0",
+    "fastify-cors": "^5.2.0",
+    "fastify-helmet": "^5.2.0",
+    "fastify-multipart": "^4.0.0",
+    "fastify-rate-limit": "^5.2.0",
+    "fastify-redis": "^4.2.0",
+    "fastify-static": "^4.0.0",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "mkdirp": "^1.0.4",
+    "opentok": "^2.11.0",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "point-of-view": "^4.13.0",
+    "randomstring": "^1.1.5",
+    "uuidv4": "^6.2.6"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.10",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mkdirp": "^1.0.1",
+    "@types/node": "^14.14.31",
+    "@types/pg": "^7.14.10",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7",
+    "pino-pretty": "^4.5.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  }
+}

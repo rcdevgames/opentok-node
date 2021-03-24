@@ -1,0 +1,12 @@
+# Dependency
+node_modules/
+
+# Environment
+.env
+
+# Generator
+build/
+
+# lock file
+yarn.lock
+package-json.lock
